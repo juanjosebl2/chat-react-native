@@ -1,12 +1,24 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View, Button } from 'react-native';
+import React, { useState } from 'react'
+import Chat from './src/components/Chat';
 
 export default function App() {
+  const [isChatVisible, setIsChatVisible] = useState(false);
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <>
+      {isChatVisible && (
+        <Chat/>
+      )}
+      {!isChatVisible && (
+        <View style={styles.container}>
+          <Button
+            title="Abrir chat"
+            onPress={() => setIsChatVisible(true)}
+          />
+        </View>
+      )}
+    </>
   );
 }
 

@@ -1,0 +1,9 @@
+Instalacion
+
+npx create-expo-app name
+npm start
+abrir android
+
+para abrir un movil virtual android
+cd /NewAndroidStudio/android-studio/bin/
+./studio.sh 
